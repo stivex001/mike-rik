@@ -9,7 +9,7 @@ const HeroSection = (props: Props) => {
         <h2 className="text-white text-2xl font-bold mb-5">
           Original & Natural
         </h2>
-        <h1 className="text-orange-300 text-4xl md:text-7xl font-extrabold md:font-bold mb-3">
+        <h1 className="text-orange-300 text-4xl md:text-7xl md:whitespace-nowrap font-extrabold md:font-bold mb-3">
           Agriculture Matter
         </h1>
         <h1 className="text-white text-4xl font-extrabold md:text-7xl md:font-bold ">Good production</h1>
