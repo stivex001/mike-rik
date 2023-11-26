@@ -15,7 +15,7 @@ const config: Config = {
         "gradient-text":
           "linear-gradient(90deg, #FFF 0.05%, #903FDA 130.38%)",
         "hero-section":
-          "url(/assets/background.jpg)",
+          "url(/assets/image.png)",
         "services-page":"url(/assets/servicePageAssets/serviceBackground.svg)",
         "why-us": "url(../public/assets/landingPageAssets/why-us.png)",
         "welcome-section":
