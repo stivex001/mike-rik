@@ -1,22 +1,27 @@
+import Image from "next/image";
 import React from "react";
+import overlay from "@/public/assets/oerlay.png";
+import CustomButton from "./CustomButton";
 
 type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <section className="flex h-screen bg-hero-section bg-no-repeat bg-cover bg-center brightness-100  items-center w-full ">
-      <div className="flex flex-col w-5/6 mx-auto mt-28 md:mt-16">
-        <h2 className="text-white text-2xl font-bold mb-5">
-          Original & Natural
-        </h2>
-        <h1 className="text-orange-300 text-4xl md:text-7xl md:whitespace-nowrap font-extrabold md:font-bold mb-3">
-          Agriculture Matter
+    <section className="relative flex h-screen bg-hero-section bg-no-repeat bg-cover bg-center brightness-100  items-center w-full ">
+      <div className=" ">
+        <Image src={overlay} alt=" " className="absolute inset-0 h-screen" />
+      </div>
+      <div className="flex flex-col w-5/6 mx-auto mt-28 z-10">
+        <h1 className="max-w-3xl text-white text-5xl font-bold ">
+          Enabling Global Trade with Premium Agricultural Exports
         </h1>
-        <h1 className="text-white text-4xl font-extrabold md:text-7xl md:font-bold ">Good production</h1>
-        <span className="w-full md:max-w-3xl text-white md:text-xl font-normal my-5">
-          Our success is built upon the knowledge of the market and wonderful
-          relationship with our suppliers and customers.
-        </span>
+        <p className="max-w-2xl text-white text-2xl font-medium mt-5">
+          Sourcing, Processing, Packaging, and Delivering Superior Agricultural
+          Products to Fulfill Global Demand
+        </p>
+        <div className="w-52 mt-10">
+          <CustomButton>Contact Us</CustomButton>
+        </div>
       </div>
     </section>
   );
