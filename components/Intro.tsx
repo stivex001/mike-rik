@@ -1,53 +1,81 @@
 import { CheckedIcon } from "@/icons/CheckedIcon";
 import React from "react";
-import product from "@/public/assets/product.jpg";
+import product from "@/public/assets/fruits.png";
 import Image from "next/image";
+import { StarIcon } from "@/icons/StarIcon";
+import { RingIcon } from "@/icons/RingIcon";
 
 type Props = {};
 
 const Intro = (props: Props) => {
   return (
-    <div className="pt-24  lg:flex gap-20">
-      <div>
-        <Image src={product} alt="" />
+    <div className="pt-24  lg:flex gap-20 items-center ">
+      <div className="flex-1">
+        <h1 className="text-neutral-950 text-3xl font-bold ">About us </h1>
+        <div className="flex flex-col mt-5">
+          <p className=" text-neutral-950 text-xl font-medium  leading-9">
+            Our mission is to redefine excellence in Agro-food processing by
+            consistently delivering sustainable and innovative food products
+            that cater to the diverse needs of our valued customers.{" "}
+          </p>
+          <h3 className="text-neutral-950 text-xl font-bold  capitalize my-10">
+            We strive to be the best in the market by:
+          </h3>
+          <div>
+            <p className="text-neutral-950 text-lg font-bold ">
+              -Innovation and adaptability
+            </p>
+            <span className=" text-zinc-800 text-lg font-medium leading-normal">
+              We continually innovate our products and processes to meet
+              evolving consumer demands and market trends, staying at the
+              forefront of the Agro-food industry{" "}
+            </span>
+          </div>
+          <div className="my-8">
+            <p className="text-neutral-950 text-lg font-bold ">
+              -Empowering partnerships
+            </p>
+            <span className=" text-zinc-800 text-lg font-medium leading-normal">
+              We foster strong partnerships with local farmers, suppliers, and
+              distributors, creating a network built on trust, fairness, and
+              mutual growth.
+            </span>
+          </div>
+          <div className="mb-8">
+            <p className="text-neutral-950 text-lg font-bold ">
+              -Responsible leadership
+            </p>
+            <span className=" text-zinc-800 text-lg font-medium leading-normal">
+              We take pride in our role as responsible cooperate citizens,
+              contributing positively to the communities we serve and acting as
+              stewards of the resources entrusted to us.
+            </span>
+          </div>
+          <div className="">
+            <p className="text-neutral-950 text-lg font-bold ">
+              -Commitment to excellence
+            </p>
+            <span className=" text-zinc-800 text-lg font-medium leading-normal">
+              We are unwavering in our pursuit of excellence, setting the bar
+              high for ourselves, our products, and our industry.
+            </span>
+          </div>
+        </div>
       </div>
+      <div className="flex-1 relative">
+        <div className=" z-50">
+          <Image src={product} alt=""  />
+        </div>
 
-      <div className="mt-20 lg:mt-0  flex flex-col gap-5">
-        <p className="text-white text-xl font-normal text-center lg:text-left ">
-          OUR INTRODUCTION
-        </p>
-        <h1 className=" text-white text-3xl md:text-5xl font-bold my-5 text-center lg:text-left">
-          Pure Agriculture and
-          <br />
-          Organic Form
-        </h1>
-        <h3 className="text-orange-300 text-xl md:text-3xl font-medium ">
-          We’re Leader in Agriculture Market
-        </h3>
-        <span className=" md:max-w-3xl text-white text-xl md:text-lg font-normal ">
-          There are many variations of passages of available but the majority
-          have suffered alteration in some form, by injected humou or randomised
-          words even slightly believable.
-        </span>
-        <div className="flex flex-col gap-5 mb-7">
-          <div className="flex items-center gap-2">
-            <CheckedIcon />
-            <span className="text-white md:text-xl font-medium ">
-              Organic food contains more vitamins
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckedIcon />
-            <span className="text-white md:text-xl font-medium ">
-              Eat organic because supply meets demand
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckedIcon />
-            <span className="text-white md:text-xl font-medium ">
-              Organic food is never irradiated
-            </span>
-          </div>
+        <div className="absolute -top-16 left-10 ">
+          <StarIcon />
+        </div>
+        <div className="absolute -top-12 -right-12 ">
+          <RingIcon />
+        </div>
+        {/* <div className="  absolute -top-12 -right-12 rounded-full bg-red-500 border-2 border-yellow-400" /> */}
+        <div>
+          <RingIcon className="absolute -bottom-12 -left-12 " />
         </div>
       </div>
     </div>

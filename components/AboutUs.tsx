@@ -8,10 +8,10 @@ type Props = {};
 
 const AboutUs = (props: Props) => {
   return (
-    <section id="about" className=" bg-[#334b35] text-white">
+    <section id="about" className=" text-white">
       <div className="w-5/6 mx-auto">
         <Intro />
-        <Fruits id={0} desc={""} />
+        <Fruits id={0} desc={""} title={""} />
       </div>
     </section>
   );
