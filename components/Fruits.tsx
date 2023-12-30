@@ -21,7 +21,6 @@ const fruitsData: Fruit[] = [
     title: "Customer-centric approach",
     desc: "Our customers' satisfaction is our driving force. we listen, learn, and tailor our offerings to meet your needs, providing you with exceptional value",
   },
-  // Add more fruits as needed
   {
     id: 2,
     icon: <QualityIcon />,
