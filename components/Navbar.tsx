@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="bg-white w-full  fixed z-10 top-0">
+    <div className="bg-white w-full  fixed z-50 top-0">
       <div className="w-5/6 h-36 mx-auto flex items-center justify-between text-white">
         <div className="w-24 h-14 ">
           <Image src={logo} alt="logo" className=" object-cover w-full " />
