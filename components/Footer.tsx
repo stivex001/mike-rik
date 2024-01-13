@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import logo from "@/public/assets/footerimg.png";
@@ -8,14 +9,20 @@ import {
   LinkedlnIcon,
   TwitterIcon,
 } from "@/icons/SocialIcons";
+import { usePathname } from "next/navigation";
 
 type Props = {};
 
 export const Footer = (props: Props) => {
+
+  const pathname = usePathname();
+
+  const hideFooter = pathname.startsWith("/products/");
+
   return (
-    <footer className="bg-emerald-800 py-24">
+    <footer className={`bg-emerald-800 py-24  ${hideFooter ? 'hidden' : ''}`}>
       <div className="container mx-auto px-5 md:px-0">
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-between">
           <div className="flex flex-col gap-10 ">
             <div className="w-24 h-14 ">
               <Image src={logo} alt="logo" className=" object-cover w-full " />
@@ -63,7 +70,7 @@ export const Footer = (props: Props) => {
           </div>
           </div>
           
-          <div className="mt-16 w-full md:basis-1/2 sm:mt-0">
+          <div className="mt-16  basis-1/2 sm:mt-0">
             <h4 className="text-neutral-100 text-center md:text-left text-xl font-bold  capitalize">
               Subcribe to our newsletter
             </h4>

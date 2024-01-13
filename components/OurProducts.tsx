@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowR } from "@/icons/ArrowR";
+import { ArrowR, ArrowRMobile } from "@/icons/ArrowR";
 import Image from "next/image";
 import { products } from "./data";
 
@@ -18,7 +18,12 @@ const OurProduts = (props: Props) => {
             <p className="text-emerald-800 text-base md:text-3xl font-medium  underline">
               See All
             </p>
-            <ArrowR />
+            <div className="hidden md:block">
+              <ArrowR />
+            </div>
+            <div className="block md:hidden">
+              <ArrowRMobile />
+            </div>
           </Link>
         </div>
         {/* products */}
@@ -31,16 +36,21 @@ const OurProduts = (props: Props) => {
             >
               <Link href={`/products/${product?.id}`}>
                 <Image src={product.img} alt="" width={448} height={451} />
-                <p className="px-5 mt-10 text-xs md:text-2xl font-semibold ">
+                <p className="px-5 mt-10 text-xs md:text-2xl font-semibold mb-2">
                   {product.name}
                 </p>
               </Link>
 
-              <Link href="/" className="px-5 flex items-center gap-5 mb-5">
+              <Link href="/" className="px-5 flex items-center gap-2 mb-5">
                 <p className="text-emerald-800 text-[10px] md:text-xl font-medium  ">
                   Contact us
                 </p>
-                <ArrowR />
+                <div className="hidden md:block">
+                  <ArrowR />
+                </div>
+                <div className="block md:hidden">
+                  <ArrowRMobile />
+                </div>
               </Link>
             </div>
           ))}

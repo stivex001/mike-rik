@@ -17,6 +17,29 @@ export const InstagramIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+export const Instagram = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
+    fill="none"
+    {...props}
+  >
+    <circle
+      cx={12}
+      cy={12.857}
+      r={11.762}
+      fill="#00683D"
+      stroke="#00D97F"
+      strokeWidth={0.475}
+    />
+    <path
+      fill="#fff"
+      d="M12.003 9.535a3.318 3.318 0 0 0-3.322 3.322 3.318 3.318 0 0 0 3.322 3.323 3.318 3.318 0 0 0 3.323-3.323 3.318 3.318 0 0 0-3.323-3.322Zm0 5.483a2.164 2.164 0 0 1-2.16-2.16c0-1.192.969-2.16 2.16-2.16 1.192 0 2.16.968 2.16 2.16 0 1.19-.971 2.16-2.16 2.16Zm4.234-5.62c0 .432-.347.776-.775.776a.775.775 0 1 1 .775-.775Zm2.2.787c-.048-1.038-.285-1.958-1.046-2.715-.758-.758-1.677-.995-2.715-1.047-1.07-.06-4.278-.06-5.348 0-1.035.049-1.955.286-2.715 1.044-.76.758-.995 1.677-1.047 2.715-.06 1.07-.06 4.277 0 5.347.05 1.039.286 1.958 1.047 2.716.76.758 1.677.995 2.715 1.047 1.07.06 4.277.06 5.348 0 1.038-.05 1.957-.287 2.715-1.047.758-.758.995-1.677 1.047-2.716.06-1.07.06-4.274 0-5.344Zm-1.382 6.492a2.187 2.187 0 0 1-1.231 1.232c-.854.339-2.878.26-3.82.26-.943 0-2.97.076-3.82-.26a2.187 2.187 0 0 1-1.233-1.232c-.338-.853-.26-2.877-.26-3.82 0-.942-.075-2.97.26-3.82a2.187 2.187 0 0 1 1.232-1.232c.853-.338 2.878-.26 3.82-.26.943 0 2.97-.075 3.82.26a2.187 2.187 0 0 1 1.232 1.232c.339.853.26 2.878.26 3.82 0 .943.079 2.97-.26 3.82Z"
+    />
+  </svg>
+)
+
 export const TwitterIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +55,29 @@ export const TwitterIcon = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
+export const Twitter = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
+    fill="none"
+    {...props}
+  >
+    <circle
+      cx={12}
+      cy={12.857}
+      r={11.762}
+      fill="#00683D"
+      stroke="#00D97F"
+      strokeWidth={0.475}
+    />
+    <path
+      fill="#fff"
+      d="m13.207 11.727 4.809-5.59h-1.14l-4.175 4.854-3.334-4.853H5.52l5.042 7.338-5.042 5.862H6.66l4.409-5.125 3.522 5.125h3.846l-5.23-7.611Zm-1.56 1.814-.511-.73L7.07 6.994h1.75l3.28 4.693.511.73 4.265 6.1h-1.75l-3.48-4.977Z"
+    />
+  </svg>
+)
 
 export const FacebookIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -51,6 +97,31 @@ export const FacebookIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+export const Facebook = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
+    fill="none"
+    {...props}
+  >
+    <circle
+      cx={12}
+      cy={12.382}
+      r={11.762}
+      fill="#00683D"
+      stroke="#00D97F"
+      strokeWidth={0.475}
+    />
+    <path
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeWidth={1.812}
+      d="M15.422 6.142h-1.56c-1.95 0-3.12 1.17-3.12 3.12v9.36M8.401 12.382h5.46"
+    />
+  </svg>
+)
+
 export const LinkedlnIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -62,3 +133,4 @@ export const LinkedlnIcon = (props: SVGProps<SVGSVGElement>) => (
     <circle cx={22} cy={22} r={22} fill="#fff" />
   </svg>
 );
+

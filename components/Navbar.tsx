@@ -16,6 +16,12 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [nav, setNav] = useState(false);
 
+  const pathname = usePathname();
+
+  const hideNavbar = pathname.startsWith("/products/");
+
+
+
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth > 768) {
@@ -31,7 +37,7 @@ const Navbar = (props: Props) => {
   }, []);
 
   return (
-    <div className="bg-white w-full  fixed z-50 top-0">
+    <div className={`bg-white shadow w-full  fixed z-50 top-0 ${hideNavbar ? 'hidden' : ''}`}>
       <div className="container h-24 md:h-36 mx-auto px-5 md:px-0 flex items-center justify-between text-white">
         <Link href="/" className="w-24 h-14 ">
           <Image src={logo} alt="logo" className=" object-cover w-full " />

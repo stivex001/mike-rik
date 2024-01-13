@@ -9,7 +9,7 @@ type Props = {
 const navLinks = [
   { id: 1, title: "Home", url: "/" },
   { id: 3, title: "About Us", url: "#about" },
-  { id: 2, title: "Products", url: "#services" },
+  { id: 2, title: "Products", url: "#products" },
 ];
 
 export const MobileLinks = ({ setNav, nav }: Props) => {
