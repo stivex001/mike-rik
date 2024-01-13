@@ -2,3 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: "Poppins";
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+  
+  .scrollbar-hide {
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      /* scrollbar-color: #942838; */
+    }
+  
+  .scrollbar-hide::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  .scrollbar-hide::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
