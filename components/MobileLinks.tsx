@@ -39,7 +39,7 @@ export const MobileLinks = ({ setNav, nav }: Props) => {
   return (
     <nav
       ref={modalRef}
-      className="bg-white w-1/2 absolute top-24 right-8 px-5 py-5 transition-transform duration-500 ease-in-out"
+      className="bg-white  absolute top-[97px] right-3 px-5 py-5 transition-transform duration-500 ease-in-out"
     >
       <ul className="flex gap-7 flex-col ">
         {navLinks.map((link) => (

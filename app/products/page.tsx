@@ -9,8 +9,8 @@ type Props = {};
 const Products = (props: Props) => {
   return (
     <main id="products" className="mt-40 ">
-      <div className="w-5/6 mx-auto">
-        <h1 className=" text-neutral-950 text-3xl font-bold  capitalize leading-[46.61px]">
+      <div className="container mx-auto">
+        <h1 className=" text-neutral-950 text-lg md:text-3xl font-bold  capitalize leading-[46.61px]">
           Check out all our products here
         </h1>
 

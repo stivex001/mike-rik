@@ -14,23 +14,24 @@ type Props = {};
 export const Footer = (props: Props) => {
   return (
     <footer className="bg-emerald-800 py-24">
-      <div className="w-5/6 mx-auto ">
-        <div className="gap-16 sm:flex">
+      <div className="container mx-auto px-5 md:px-0">
+        <div className="flex flex-wrap">
           <div className="flex flex-col gap-10 ">
             <div className="w-24 h-14 ">
               <Image src={logo} alt="logo" className=" object-cover w-full " />
             </div>
-            <div className="w-[312px]">
-              <p className="text-emerald-50 text-base font-bold ">
+            <div className="w-[198px] md:w-[312px]">
+              <p className="text-emerald-50 text-[10px] md:text-base font-bold ">
                 Copyright. all right reserve to MikeRik
               </p>
-              <div className=" h-[0px] border border-emerald-50"></div>
+              <div className="  h-[0px] border border-emerald-50"></div>
             </div>
           </div>
-          <div className="mt-16 basis-1/2 sm:mt-0">
+          {/* <div className="mt-16 basis-1/2 sm:mt-0">
             <h4 className="text-white text-xl font-bold  capitalize">Home</h4>
-          </div>
-          <div className="mt-16 basis-1/2 sm:mt-0">
+          </div> */}
+          <div className="flex gap-10 ">
+            <div className="mt-16 basis-1/2 sm:mt-0">
             <h4 className="text-white text-xl font-bold  capitalize mb-7">
               Products
             </h4>
@@ -42,11 +43,11 @@ export const Footer = (props: Props) => {
               <p className="text-emerald-50 text-base font-bold ">Crayfish</p>
             </div>
           </div>
-          <div className="mt-16 basis-1/2 sm:mt-0">
+          {/* <div className="mt-16 basis-1/2 sm:mt-0">
             <h4 className="text-white text-xl font-bold  capitalize mb-7">
               About Us
             </h4>
-          </div>
+          </div> */}
           <div className="mt-16 basis-1/2 sm:mt-0">
             <h4 className="text-white text-xl font-bold  capitalize mb-7">
               Contact Us
@@ -60,8 +61,10 @@ export const Footer = (props: Props) => {
               </p>
             </div>
           </div>
-          <div className="mt-16 basis-1/2 sm:mt-0">
-            <h4 className="text-neutral-100 text-xl font-bold  capitalize">
+          </div>
+          
+          <div className="mt-16 w-full md:basis-1/2 sm:mt-0">
+            <h4 className="text-neutral-100 text-center md:text-left text-xl font-bold  capitalize">
               Subcribe to our newsletter
             </h4>
 
@@ -69,13 +72,13 @@ export const Footer = (props: Props) => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="py-1.5 px-3 text-emerald-600 text-sm font-medium outline-none  placeholder:text-emerald-600"
+                className="py-1.5 w-full px-3 text-emerald-600 text-sm font-medium outline-none  placeholder:text-emerald-600"
               />
               <button >
                 <ArrowBtn />
               </button>
             </div>
-            <div className="flex items-center gap-5 cursor-pointer">
+            <div className="flex items-center justify-center md:justify-start gap-5 cursor-pointer">
               <InstagramIcon />
               <TwitterIcon />
               <FacebookIcon />

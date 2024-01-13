@@ -32,13 +32,13 @@ const Navbar = (props: Props) => {
 
   return (
     <div className="bg-white w-full  fixed z-50 top-0">
-      <div className="container h-24 md:h-36 mx-auto flex items-center justify-between text-white">
+      <div className="container h-24 md:h-36 mx-auto px-5 md:px-0 flex items-center justify-between text-white">
         <Link href="/" className="w-24 h-14 ">
           <Image src={logo} alt="logo" className=" object-cover w-full " />
         </Link>
         <div
           onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden relative"
+          className="cursor-pointer mt-2 pr-4 z-10 text-gray-500 md:hidden relative"
         >
           {nav ? <CloseIcon /> : <HamburgerIcon />}
         </div>

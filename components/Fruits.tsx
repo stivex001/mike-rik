@@ -39,22 +39,22 @@ const Fruits = (props: Fruit) => {
   return (
     <div className="py-20">
       <div>
-        <h1 className="max-w-xl text-neutral-950 text-[32px] font-bold  capitalize leading-[46.61px]">
+        <h1 className="max-w-xl text-neutral-950 text-lg md:text-3xl font-bold  capitalize leading-relaxed md:leading-[46.61px]">
           What we stand to offer you when you make a deal with us
         </h1>
-        <div className="my-14 grid grid-cols-2 sm:grid-cols-3 gap-10 ">
+        <div className="my-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {fruitsData.map((fruit) => (
             <div
               key={fruit.id}
-              className=" h-[381px] p-10  bg-emerald-800  rounded-[10px] justify-center items-center gap-2.5 inline-flex "
+              className=" md:h-[381px] p-10  bg-emerald-800  rounded-[10px] md:justify-center items-center gap-2.5 inline-flex "
             >
               <div className="flex flex-col gap-10">
                 {fruit.icon}
                 <div>
-                  <p className="text-white text-2xl font-bold  capitalize">
+                  <p className="text-white text-xs md:text-2xl font-bold  capitalize">
                     {fruit.title}
                   </p>
-                  <h1 className="  text-white text-lg font-medium ">
+                  <h1 className="  text-white text-[10px] md:text-lg font-medium ">
                     {fruit.desc}
                   </h1>
                 </div>

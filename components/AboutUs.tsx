@@ -9,7 +9,7 @@ type Props = {};
 const AboutUs = (props: Props) => {
   return (
     <section id="about" className=" text-white">
-      <div className="w-5/6 mx-auto">
+      <div className="container mx-auto px-5 md:px-0">
         <Intro />
         <Fruits id={0} desc={""} title={""} />
       </div>
