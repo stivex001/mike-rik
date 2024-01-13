@@ -1,12 +1,17 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowR, ArrowRMobile } from "@/icons/ArrowR";
 import Image from "next/image";
 import { products } from "./data";
+import { useModal } from "@/contexts/useModal";
 
 type Props = {};
 
 const OurProduts = (props: Props) => {
+  const { openModal } = useModal();
+
   return (
     <section id="products" className="">
       <div className="container px-5 md:px-0 mx-auto">
@@ -41,7 +46,10 @@ const OurProduts = (props: Props) => {
                 </p>
               </Link>
 
-              <Link href="/" className="px-5 flex items-center gap-2 mb-5">
+              <button
+                onClick={openModal}
+                className="px-5 flex items-center gap-2 mb-5"
+              >
                 <p className="text-emerald-800 text-[10px] md:text-xl font-medium  ">
                   Contact us
                 </p>
@@ -51,7 +59,7 @@ const OurProduts = (props: Props) => {
                 <div className="block md:hidden">
                   <ArrowRMobile />
                 </div>
-              </Link>
+              </button>
             </div>
           ))}
         </div>

@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <AboutUs />
       <OurProduts />
-      <ContactUs />
+      {/* <ContactUs /> */}
     </main>
   )
 }

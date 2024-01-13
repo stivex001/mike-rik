@@ -25,7 +25,7 @@ export const CloseIcon = (props: SVGProps<SVGSVGElement>) => (
       {...props}
     >
       <path
-        stroke="#00683D"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}

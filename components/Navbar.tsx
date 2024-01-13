@@ -10,6 +10,7 @@ import Link from "next/link";
 import { CloseIcon, HamburgerIcon } from "@/icons/MenuIcons";
 import { MobileLinks } from "./MobileLinks";
 import { usePathname } from "next/navigation";
+import { useModal } from "@/contexts/useModal";
 
 type Props = {};
 
@@ -20,7 +21,7 @@ const Navbar = (props: Props) => {
 
   const hideNavbar = pathname.startsWith("/products/");
 
-
+  const { openModal } = useModal();
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -37,7 +38,11 @@ const Navbar = (props: Props) => {
   }, []);
 
   return (
-    <div className={`bg-white shadow w-full  fixed z-50 top-0 ${hideNavbar ? 'hidden' : ''}`}>
+    <div
+      className={`bg-white shadow w-full  fixed z-50 top-0 ${
+        hideNavbar ? "hidden" : ""
+      }`}
+    >
       <div className="container h-24 md:h-36 mx-auto px-5 md:px-0 flex items-center justify-between text-white">
         <Link href="/" className="w-24 h-14 ">
           <Image src={logo} alt="logo" className=" object-cover w-full " />
@@ -51,8 +56,11 @@ const Navbar = (props: Props) => {
         <Navlinks />
 
         <div className="hidden md:flex items-center gap-10 cursor-pointer">
-          <PersonIcon />
-          <button className=" h-14 px-[58px] py-4 bg-emerald-800 rounded-[5px] justify-center items-center gap-px inline-flex">
+          {/* <PersonIcon /> */}
+          <button
+            onClick={openModal}
+            className=" h-14 px-[58px] py-4 bg-emerald-800 rounded-[5px] justify-center items-center gap-px inline-flex"
+          >
             <span className="text-white text-xl font-bold ">Contact us</span>
           </button>
         </div>

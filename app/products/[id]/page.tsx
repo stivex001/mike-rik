@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import { products } from "@/components/data";
 import { BackIcon } from "@/icons/ArrowR";
 import { useRouter } from "next/navigation";
+import { useModal } from "@/contexts/useModal";
 
 type Props = {
   params: {
@@ -26,6 +27,8 @@ const Product = ({ params }: Props) => {
   const router = useRouter();
   const product = products.find((p) => p.id == id);
   const [isMobile, setIsMobile] = useState(false);
+
+  const { openModal } = useModal();
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,7 +53,7 @@ const Product = ({ params }: Props) => {
               {product?.desc}
             </p>
             <div className="w-48 mt-7">
-              <CustomButton>Contact Us</CustomButton>
+              <CustomButton onClick={openModal}>Contact Us</CustomButton>
             </div>
             <p className="mt-7 text-2xl font-bold">Reach us on socials</p>
             <div className="mt-7 flex items-center gap-5 cursor-pointer">
