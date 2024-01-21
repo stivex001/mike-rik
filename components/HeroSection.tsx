@@ -7,9 +7,9 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <section className="relative flex h-[90vh] bg-hero-section bg-no-repeat bg-cover bg-center brightness-100  items-center w-full ">
+    <section className="relative flex h-screen bg-hero-section bg-no-repeat bg-cover bg-center brightness-100  items-center w-full ">
       <div className=" object-cover object-center">
-        <Image src={overlay} alt=" " className="absolute  inset-0 h-[90vh] " />
+        <Image src={overlay} alt=" " className="absolute  inset-0  " layout="fill" />
       </div>
       <div className="flex flex-col w-5/6 mx-auto mt-28 z-10">
         <h1 className="max-w-3xl text-white text-2xl lg:text-5xl font-bold ">

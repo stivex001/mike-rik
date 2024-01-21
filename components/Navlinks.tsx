@@ -11,21 +11,26 @@ const navLinks = [
 type Props = {};
 
 const Navlinks = (props: Props) => {
-  const path = usePathname();
+  const pathname = usePathname();
 
-  let active =
-    "text-zinc-800 text-xl font-bold hover:text-emerald-800 duration-300 ease-out hover:border-b-2 hover:border-b-emerald-800";
-  let inActive =
-    "text-zinc-800 text-xl font-bold hover:text-emerald-800 hover:border-b-2 hover:border-b-emerald-800";
+  console.log(pathname);
+  
 
   return (
     <nav className="hidden md:block">
       <ul className="flex items-center gap-5 lg:gap-12 ">
         {navLinks.map((link) => (
           <Link href={link.url} key={link.id}>
-            <span className={`${path == link.url ? active : inActive} `}>
+            <span
+              className={`text-zinc-800 text-xl font-bold hover:text-emerald-800 duration-300 transition relative ${
+                pathname === link.url ? "text-emerald-900" : "text-black"
+              }`}
+            >
               {link.title}
             </span>
+            {/* {pathname === link.url && (
+              <span className="absolute -bottom-1 left-0 w-full h-1 bg-emerald-900"></span>
+            )} */}
           </Link>
         ))}
       </ul>
