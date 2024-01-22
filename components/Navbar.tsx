@@ -58,7 +58,7 @@ const Navbar = (props: Props) => {
         <div className="hidden md:flex items-center gap-10 cursor-pointer">
           {/* <PersonIcon /> */}
           <button
-            onClick={openModal}
+            // onClick={openModal}
             className=" h-14 px-[58px] py-4 bg-emerald-800 rounded-[5px] justify-center items-center gap-px inline-flex"
           >
             <span className="text-white text-xl font-bold ">Contact us</span>
