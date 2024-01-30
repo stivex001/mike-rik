@@ -1,11 +1,14 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import overlay from "@/public/assets/oerlay.png";
 import CustomButton from "./CustomButton";
+import { useModal } from "@/contexts/useModal";
 
 type Props = {};
 
 const HeroSection = (props: Props) => {
+  const { openModal } = useModal();
   return (
     <section className="relative flex h-screen bg-hero-section bg-no-repeat bg-cover bg-center brightness-100  items-center w-full ">
       <div className=" object-cover object-center">
@@ -20,7 +23,7 @@ const HeroSection = (props: Props) => {
           Products to Fulfill Global Demand
         </p>
         <div className="w-52 mt-10">
-          <CustomButton>Contact Us</CustomButton>
+          <CustomButton onClick={openModal}>Contact Us</CustomButton>
         </div>
       </div>
       {/* <div className="origin-top-left rotate-90 w-[45px] h-[45px] absolute bottom-0">

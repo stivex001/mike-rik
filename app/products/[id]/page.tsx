@@ -55,8 +55,8 @@ const Product = ({ params }: Props) => {
             <div className="w-48 mt-7">
               <CustomButton onClick={openModal}>Contact Us</CustomButton>
             </div>
-            <p className="mt-7 text-2xl font-bold">Reach us on socials</p>
-            <div className="mt-7 flex items-center gap-5 cursor-pointer">
+            {/* <p className="mt-7 text-2xl font-bold">Reach us on socials</p> */}
+            {/* <div className="mt-7 flex items-center gap-5 cursor-pointer">
               <div className="">
                 <Instagram />
               </div>
@@ -66,9 +66,9 @@ const Product = ({ params }: Props) => {
               <div className="w-6 h-6 bg-emerald-800 rounded-full border border-emerald-500 flex items-center justify-center">
                 <span className="text-white text-[10.36px] font-bold ">In</span>
               </div>
-            </div>
+            </div> */}
             <div
-              className="md:absolute bottom-0 cursor-pointer mt-5"
+              className="md:absolute bottom-10 cursor-pointer mt-5"
               onClick={() => router.back()}
             >
               <BackIcon />
