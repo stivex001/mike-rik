@@ -71,7 +71,7 @@ export const Footer = (props: Props) => {
           </div>
           </div>
           
-          <div className="mt-16 sm:mt-0 w-72 md:w-96">
+          <div className="mt-16 sm:mt-0 w-full md:w-96">
             <h4 className="text-neutral-100 text-center md:text-left text-xl font-bold  capitalize">
               Subcribe to our newsletter
             </h4>
