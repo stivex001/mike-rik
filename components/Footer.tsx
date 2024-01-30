@@ -10,6 +10,7 @@ import {
   TwitterIcon,
 } from "@/icons/SocialIcons";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 type Props = {};
 
@@ -22,7 +23,7 @@ export const Footer = (props: Props) => {
   return (
     <footer className={`bg-emerald-800 py-24  ${hideFooter ? 'hidden' : ''}`}>
       <div className="container mx-auto px-5 md:px-0">
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap  justify-between">
           <div className="flex flex-col gap-10 ">
             <div className="w-24 h-14 ">
               <Image src={logo} alt="logo" className=" object-cover w-full " />
@@ -42,13 +43,13 @@ export const Footer = (props: Props) => {
             <h4 className="text-white text-xl font-bold  capitalize mb-7">
               Products
             </h4>
-            <div className="flex flex-col gap-5">
+            <Link href='/products' className="flex flex-col gap-5 mr-16">
               <p className="text-emerald-50 text-base font-bold ">Cashew nut</p>
               <p className="text-emerald-50 text-base font-bold ">Cocoa</p>
               <p className="text-emerald-50 text-base font-bold ">Sesame</p>
               <p className="text-emerald-50 text-base font-bold ">Egunsi</p>
               <p className="text-emerald-50 text-base font-bold ">Crayfish</p>
-            </div>
+            </Link>
           </div>
           {/* <div className="mt-16 basis-1/2 sm:mt-0">
             <h4 className="text-white text-xl font-bold  capitalize mb-7">
@@ -70,7 +71,7 @@ export const Footer = (props: Props) => {
           </div>
           </div>
           
-          <div className="mt-16  basis-1/2 sm:mt-0">
+          <div className="mt-16 sm:mt-0 w-72 md:w-96">
             <h4 className="text-neutral-100 text-center md:text-left text-xl font-bold  capitalize">
               Subcribe to our newsletter
             </h4>
@@ -85,12 +86,12 @@ export const Footer = (props: Props) => {
                 <ArrowBtn />
               </button>
             </div>
-            <div className="flex items-center justify-center md:justify-start gap-5 cursor-pointer">
+            {/* <div className="flex items-center justify-center md:justify-start gap-5 cursor-pointer">
               <InstagramIcon />
               <TwitterIcon />
               <FacebookIcon />
               <LinkedlnIcon />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -20,6 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/mike rik logo 1.png" />
+      </head>
       <body className={`${inter.className} root`}>
         <ModalProvider>
           <AppModal /> 

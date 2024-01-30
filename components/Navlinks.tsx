@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const navLinks = [
   { id: 1, title: "Home", url: "/" },
@@ -11,10 +11,7 @@ const navLinks = [
 type Props = {};
 
 const Navlinks = (props: Props) => {
-  const pathname = usePathname();
-
-  console.log(pathname);
-  
+  // console.log(hash);
 
   return (
     <nav className="hidden md:block">
@@ -22,15 +19,12 @@ const Navlinks = (props: Props) => {
         {navLinks.map((link) => (
           <Link href={link.url} key={link.id}>
             <span
-              className={`text-zinc-800 text-xl font-bold hover:text-emerald-800 duration-300 transition relative ${
-                pathname === link.url ? "text-emerald-900" : "text-black"
-              }`}
+              className={`text-zinc-800 text-xl font-bold hover:text-emerald-800 duration-300 transition relative 
+                
+              `}
             >
               {link.title}
             </span>
-            {/* {pathname === link.url && (
-              <span className="absolute -bottom-1 left-0 w-full h-1 bg-emerald-900"></span>
-            )} */}
           </Link>
         ))}
       </ul>

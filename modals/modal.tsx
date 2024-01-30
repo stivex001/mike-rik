@@ -12,21 +12,20 @@ export const AppModal: FC = () => {
   const customStyles: {} = {
     overlay: {
       position: "fixed",
-      top: '0%',
+      top: "0%",
       right: 0,
       bottom: 0,
       opacity: "1",
     },
     content: {
       top: 0,
-      left: 0,  
+      left: 0,
       right: 0,
       bottom: "50%",
       // transform: "translate(0, -50%)", // Adjust the transform
       borderRadius: "8px",
     },
   };
-  
 
   return (
     <Modal
@@ -39,19 +38,15 @@ export const AppModal: FC = () => {
       contentLabel="Contact Us Modal"
       overlayClassName={"h-full left-0 bg-[#0000009b] z-[99999]"}
       className={
-        "absolute bg-white h-[95%] w-[95%]  overflow-scroll no-scrollbar"
+        "absolute bg-red-500 h-screen  overflow-scroll no-scrollbar"
       }
       // parentSelector={() => document.querySelector('.root')!}
     >
-      <div className="container mx-auto px-5 md:px-0">
+      <div className="w-3/4 mx-auto px-5 md:px-0 h-screen">
         <div className="relative h-screen bg-hero-section bg-no-repeat bg-cover bg-center flex items-center justify-center ">
-          <div className="absolute inset-0 h-screen bg-emerald-800 bg-opacity-75 backdrop-blur-[5px]" />
-          <div className="flex flex-col z-10">
-            <button
-              type="button"
-              onClick={closeModal}
-              className="text-white"
-            >
+          <div className="absolute inset-0  bg-emerald-800 bg-opacity-75 backdrop-blur-[5px]" />
+          <div className="flex flex-col z-10 ">
+            <button type="button" onClick={closeModal} className="text-white">
               <CloseIcon />
             </button>
             <h1 className=" text-center text-white text-sm md:text-5xl font-bold ">

@@ -39,7 +39,7 @@ const Navbar = (props: Props) => {
 
   return (
     <div
-      className={`bg-white shadow w-full  fixed z-50 top-0 ${
+      className={`bg-white shadow w-full  fixed z-10 top-0 ${
         hideNavbar ? "hidden" : ""
       }`}
     >
